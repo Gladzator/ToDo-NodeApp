@@ -15,17 +15,17 @@ if(!ObjectID.isValid(uid)) {
   console.log('User id not valid');
 }
 
-// Todo.find({
-//   _id: id
-// }).then((todos) => {
-//   console.log('Todos', todos);
-// });
-//
-// Todo.findOne({
-//   completed: false
-// }).then((todo) => {
-//   console.log('Todo', todo);
-// });
+Todo.find({
+  _id: id
+}).then((todos) => {
+  console.log('Todos', todos);
+});
+
+Todo.findOne({
+  completed: false
+}).then((todo) => {
+  console.log('Todo', todo);
+});
 
 Todo.findById(id).then((todo) => {
   if(!todo) {
